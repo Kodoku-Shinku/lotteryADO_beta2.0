@@ -1,0 +1,220 @@
+{
+    "isDefaultDeck": true,
+    "cards": [{
+            "name": "El Alacrán",
+            "uri": "El Alacrán.png"
+        },
+        {
+            "name": "El Árbol",
+            "uri": "El Árbol.png"
+        },
+        {
+            "name": "Spider Man",
+            "uri": "Spider Man.png"
+        },
+        {
+            "name": "El Bonsai",
+            "uri": "El Bonsai.png"
+        },
+        {
+            "name": "El Camarón",
+            "uri": "El Camarón.png"
+        },
+        {
+            "name": "Sing 2",
+            "uri": "Sing 2.png"
+        },
+        {
+            "name": "El Chef",
+            "uri": "El Chef.png"
+        },
+        {
+            "name": "ADO",
+            "uri": "ADO.png"
+        },
+        {
+            "name": "El Corazón",
+            "uri": "El Corazón.png"
+        },
+        {
+            "name": "El Cotorro",
+            "uri": "El Cotorro.png"
+        },
+        {
+            "name": "QATAR ADO",
+            "uri": "QATAR ADO.png"
+        },
+        {
+            "name": "El Gallo",
+            "uri": "El Gallo.png"
+        },
+        {
+            "name": "El Héroe",
+            "uri": "El Héroe.png"
+        },
+        {
+            "name": "Las Promos",
+            "uri": "Las Promos.png"
+        },
+        {
+            "name": "Godzilla VS Kong",
+            "uri": "Godzilla VS Kong.png"
+        },
+        {
+            "name": "El Kiwi",
+            "uri": "El Kiwi.png"
+        },
+        {
+            "name": "Bus Platino",
+            "uri": "Bus Platino.png"
+        },
+        {
+            "name": "El Mango",
+            "uri": "El Mango.png"
+        },
+        {
+            "name": "El Mundo",
+            "uri": "El Mundo.png"
+        },
+        {
+            "name": "El Nopal",
+            "uri": "El Nopal.png"
+        },
+        {
+            "name": "El Paraguas",
+            "uri": "El Paraguas.png"
+        },
+        {
+            "name": "El Pez",
+            "uri": "El Pez.png"
+        },
+        {
+            "name": "El Sol",
+            "uri": "El Sol.png"
+        },
+        {
+            "name": "El Sombrero",
+            "uri": "El Sombrero.png"
+        },
+        {
+            "name": "Bus GL",
+            "uri": "Bus GL.png"
+        },
+        {
+            "name": "El Valiente",
+            "uri": "El Valiente.png"
+        },
+        {
+            "name": "El Venado",
+            "uri": "El Venado.png"
+        },
+        {
+            "name": "El Violoncello",
+            "uri": "El Violoncello.png"
+        },
+        {
+            "name": "La Abeja",
+            "uri": "La Abeja.png"
+        },
+        {
+            "name": "Bus ADO",
+            "uri": "Bus ADO.png"
+        },
+        {
+            "name": "La Araña",
+            "uri": "La Araña.png"
+        },
+        {
+            "name": "Batman",
+            "uri": "Batman.png"
+        },
+        {
+            "name": "Movie Bus",
+            "uri": "Movie Bus.png"
+        },
+        {
+            "name": "La Campana",
+            "uri": "La Campana.png"
+        },
+        {
+            "name": "La Catrina",
+            "uri": "La Catrina.png"
+        },
+        {
+            "name": "La Cereza",
+            "uri": "La Cereza.png"
+        },
+        {
+            "name": "La Corona",
+            "uri": "La Corona.png"
+        },
+        {
+            "name": "La Dama",
+            "uri": "La Dama.png"
+        },
+        {
+            "name": "La Escalera",
+            "uri": "La Escalera.png"
+        },
+        {
+            "name": "La Estrella",
+            "uri": "La Estrella.png"
+        },
+        {
+            "name": "La Fresa",
+            "uri": "La Fresa.png"
+        },
+        {
+            "name": "La Garza",
+            "uri": "La Garza.png"
+        },
+        {
+            "name": "La Guitarra",
+            "uri": "La Guitarra.png"
+        },
+        {
+            "name": "New Times",
+            "uri": "New Times.png"
+        },
+        {
+            "name": "La Luna",
+            "uri": "La Luna.png"
+        },
+        {
+            "name": "La Mano",
+            "uri": "La Mano.png"
+        },
+        {
+            "name": "La Naranja",
+            "uri": "La Naranja.png"
+        },
+        {
+            "name": "La Palma",
+            "uri": "La Palma.png"
+        },
+        {
+            "name": "ADO Platino",
+            "uri": "ADO Platino.png"
+        },
+        {
+            "name": "La Rana",
+            "uri": "La Rana.png"
+        },
+        {
+            "name": "La Rosa",
+            "uri": "La Rosa.png"
+        },
+        {
+            "name": "La Sandía",
+            "uri": "La Sandía.png"
+        },
+        {
+            "name": "La Sirena",
+            "uri": "La Sirena.png"
+        },
+        {
+            "name": "ADO GL",
+            "uri": "ADO GL.png"
+        }
+    ]
+}

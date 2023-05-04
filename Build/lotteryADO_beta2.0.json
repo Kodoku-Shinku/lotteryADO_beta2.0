@@ -1,0 +1,16 @@
+{
+"companyName": "DefaultCompany",
+"productName": "LotteryADO",
+"productVersion": "0.1",
+"dataUrl": "lotteryADO_beta2.0.data.unityweb",
+"wasmCodeUrl": "lotteryADO_beta2.0.wasm.code.unityweb",
+"wasmFrameworkUrl": "lotteryADO_beta2.0.wasm.framework.unityweb",
+"graphicsAPI": ["WebGL 2.0","WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20",
+"cacheControl": {"default": "must-revalidate"},
+"developmentBuild": false,
+"multithreading": false,
+"unityVersion": "2019.3.4f1"
+}

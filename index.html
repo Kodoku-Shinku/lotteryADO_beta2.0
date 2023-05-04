@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Lottery Game</title>
+  <link rel="shortcut icon" href="TemplateData/favicon.ico">
+  <link rel="stylesheet" href="TemplateData/style.css">
+  <script src="TemplateData/UnityProgress.js"></script>
+  <script src="Build/UnityLoader.js"></script>
+  <script>
+  UnityLoader.Error.handler = function(e, t){console.log(e);}
+    var unityInstance = UnityLoader.instantiate("unityContainer", "Build/lotteryADO_beta2.0.json", {Module: {backgroundColor: "#22BCDE "}}, {
+      onProgress: UnityProgress
+    });
+  </script>
+  <style>
+    html {
+      background-color: white;
+    }
+
+    /* maintain 960x540 aspect ratio */
+    #unityContainer {
+      width: 100vw;
+      height: 50vw;
+      margin: auto;
+    }
+
+    .full-screen {
+
+          background: white;
+          text-align: right;
+          color: #942C69;
+    }
+
+    .webgl-content * {
+      border: 0;
+      margin: 0;
+      padding: 0;
+    }
+
+    .webgl-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+</head>
+
+<body scroll="no" style="overflow:hidden;">
+  <div id="custom-logo" hidden></div>
+
+    <div id="custom-loader" hidden>
+      <div class="fill"></div>
+      <div class="label"></div>
+    </div>
+
+  <div id="webgl" class="webgl-content">
+    <div id="fullscreen"  class ="full-screen" style="font-size:12px; text-align: right; padding-right: 80px;" onclick="unityInstance.SetFullscreen(1);"><b>CLICK HERE TO ENTER FULLSCREEN</b></div>
+    <div id="unityContainer"></div>
+  </div>
+  <script>
+    jQuery(document).ready(function($) {
+      
+      var loginObject = { email: 'ger@gmail.com', roomname: 'sala1', password: 'amiguito', language: 'es' };
+      var jsonLoginObj = JSON.stringify(loginObject);
+
+      SendData = function() {
+        unityInstance.SendMessage("LoginController", "DoLoginByEmail", jsonLoginObj);
+      }
+
+    });
+    function doOnOrientationChange()
+    {
+        const width  = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+        const height = window.innerHeight|| document.documentElement.clientHeight|| document.body.clientHeight;
+        var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+        if (isMobile) {
+          var isSafari = navigator.vendor && navigator.vendor.indexOf('Apple') > -1 && navigator.userAgent && navigator.userAgent.indexOf('CriOS') == -1 && navigator.userAgent.indexOf('FxiOS') == -1;
+          var isFullscreen = document.fullscreenEnabled || document.webkitFullscreenEnabled || document.mozFullScreenEnabled || document.msFullscreenEnabled;
+          switch(window.orientation)
+          {
+              case -90:
+              case 90:
+                var unity = document.getElementById("unityContainer");
+                var fullscreen = document.getElementById("fullscreen");
+                unity.style.width = '(75 * 9)/16'+'vw';
+                unity.style.height ='42.1875vw';//'42.75vw';
+                if(isSafari){
+                    fullscreen.style.display = "block";
+                }
+                break;
+              case 0:
+                if(isFullscreen){
+                    unityInstance.SetFullscreen(0);
+                }
+                var unity = document.getElementById("unityContainer");
+                var fullscreen = document.getElementById("fullscreen");
+                unity.style.width = '100vw';
+                unity.style.height = '56.25vw';
+                if(isSafari){
+                    fullscreen.style.display = "none";
+                }
+                break;
+              default:
+                break;
+          }
+        }else{
+            var unity = document.getElementById("unityContainer");
+            var fullscreen = document.getElementById("fullscreen");
+            unity.style.width = width;
+            unity.style.height = height;
+            //alert('W: '+width+ ' H: '+height);
+        }
+
+    }
+
+      window.addEventListener('orientationchange', doOnOrientationChange);
+
+      doOnOrientationChange();
+
+    function isSafariBrowser(){
+        var unityDiv = document.getElementById("unityContainer");
+        var fsDiv = document.getElementById("fullscreen");
+        var isPortrait = window.matchMedia("(orientation: portrait)");
+        var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+        var isSafari = navigator.vendor && navigator.vendor.indexOf('Apple') > -1 && navigator.userAgent && navigator.userAgent.indexOf('CriOS') == -1 && navigator.userAgent.indexOf('FxiOS') == -1;
+        if(isSafari){
+            unityDiv.style.height = ((100 * 9 / 16) - 3.16)+'vw';
+            if(isMobile && isPortrait){
+                fsDiv.style.display = "none";
+            }else{
+               fsDiv.style.display = "block";
+            }
+        }else{
+            fsDiv.style.display = "none";
+        }
+    }
+
+    isSafariBrowser();
+
+    var isActive;
+    document.addEventListener('visibilitychange', function () {
+    if (document.visibilityState == "hidden") {
+        isActive = setInterval(function() { unityInstance.SendMessage("BrowserInteractionHelper", "KeepAlive"); }, 250);
+    } else {
+        clearInterval(isActive);
+        isActive = false;
+    }
+    });
+  </script>
+</body>
+
+</html>
